@@ -26,11 +26,13 @@
         overlays = [ erlang_26_rebar_overlay ];
       };
       elp = pkgs.callPackage ./elp.nix {};
+      helix-pkg = helix.packages.${system}.default;
+
     in {
       devShell = import ./shell.nix {
         inherit pkgs;
         inherit elp;
-        inherit helix;
+        inherit helix-pkg;
       };
       # defaultPackage = erlang_bits;
       packages = flake-utils.lib.flattenTree {

@@ -1,4 +1,4 @@
-{pkgs, elp, helix, ...}:
+{pkgs, elp, helix-pkg, ...}:
 pkgs.mkShell {
   buildInputs = with pkgs; [
     # nix tools
@@ -8,7 +8,7 @@ pkgs.mkShell {
     erlang_26
     rebar3
     elp
-    helix
+    helix-pkg
 
     # postgresql tools
     dbmate
