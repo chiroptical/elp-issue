@@ -5,7 +5,8 @@
   {mod, {reproduce_issue_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    restc
    ]},
   {env,[]},
   {modules, []},
